@@ -15,3 +15,9 @@ var DBMigrate = require( 'db-migrate' );
 
 // The next step is to get a new instance of DBMigrate
 var dbmigrate = DBMigrate.getInstance(true);
+
+// next we call the migrations
+dbmigrate.up( Number.MAX_VALUE, null, function() {
+
+  console.log( 'Here we go!' );
+} );
