@@ -1,0 +1,10 @@
+{
+   "default": "mysql",
+   "mysql": {
+      "driver": "mysql",
+      "user": "root",
+      "host": "localhost",
+      "password": "password",
+      "database": "db"
+   }
+}

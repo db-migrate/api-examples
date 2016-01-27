@@ -1,0 +1,23 @@
+{
+  "name": "db-migrate-api-examples",
+  "version": "1.0.0",
+  "description": "An example of using the programable API.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/db-migrate/api-examples.git"
+  },
+  "author": "Tobias Gurtzick <magic@wizardtales.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/db-migrate/api-examples/issues"
+  },
+  "homepage": "https://github.com/db-migrate/api-examples#readme",
+  "dependencies": {
+    "db-migrate": "^0.10.0-beta.9",
+    "db-migrate-mysql": "^1.1.3"
+  }
+}
