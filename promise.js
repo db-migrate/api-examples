@@ -16,18 +16,14 @@ var DBMigrate = require( 'db-migrate' );
 // The next step is to get a new instance of DBMigrate
 var dbmigrate = DBMigrate.getInstance(true);
 
-// next we call the migrations
-dbmigrate.reset( () => {
-  dbmigrate.up( 2, () => {
-    dbmigrate.down( 1, () => {
-      dbmigrate.up( () => {
-        dbmigrate.reset( () => {
-          dbmigrate.up( () => {
+// next we call the migrations, several examples in a promise style
+dbmigrate.reset()
+.then( () => dbmigrate.up( 2 ) )
+.then( () => dbmigrate.down( 1 ) )
+.then( () => dbmigrate.up() )
+.then( () => dbmigrate.reset() )
+.then( () => dbmigrate.up() )
+.then( () => {
 
-            console.log( 'Here we go!' );
-          } );
-        } );
-      } );
-    } );
-  } );
-});
+  console.log( 'Here we go!' );
+} );
